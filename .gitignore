@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Large files
+Colbert.zip
+Colbert
+*.jpeg
+*.jpg
+!fartformer.jpeg
+topics.csv
+*.xcf
