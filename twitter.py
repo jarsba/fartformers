@@ -5,11 +5,15 @@ import re
 import string
 import os
 from dotenv import load_dotenv
+from string import printable
 
 load_dotenv()
 
 
 def filter_tweet(text):
+
+
+
     if "@" in text:
         return False
 
@@ -17,6 +21,11 @@ def filter_tweet(text):
         return False
 
     if "http:" in text or "https:" in text:
+        return False
+
+    text = ''.join(filter(lambda x: x in printable, text))
+
+    if len(text) < 25:
         return False
 
     return True
